@@ -80,13 +80,13 @@ node js/server.js
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/my-tasks-board.git
+git clone https://github.com/your-username/my-tasks-board-Challenge.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd my-tasks-board
+cd My-Task-Board-Challenge
 ```
 
 Install dependencies:
@@ -139,7 +139,7 @@ If you'd like to improve this project:
 2. **Clone your fork**
 
 ```bash
-git clone https://github.com/your-username/my-tasks-board.git
+git clone https://github.com/your-username/my-tasks-board-Challenge.git
 ```
 
 3. **Create a new branch**
