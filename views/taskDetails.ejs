@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/all.min.css">
+        <link rel="stylesheet" href="/style/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <title>My Task Board Challenge</title>
+    </head>
+    <body>
+        <div class="tasks-details">
+            <h1>Task details</h1>
+            <div class="info">
+                <label for="name" class="l-name">Task name</label>
+                <input form="taskForm" type="text" class="name" name="name" id="name" placeholder="Enter Task name">
+                <label for="description" class="l-description">Description</label>
+                <textarea form="taskForm" class="description" name="description" id="description">Enter a short description</textarea>
+                <!-- pour les tasks details, on a besoin de 2 champs : name et description. on peut aussi 
+                ajouter des champs cachés pour stocker l'icône et le statut sélectionnés par l'utilisateur. 
+                ces champs seront mis à jour par les fonctions selectIcon et selectStatus lorsqu'un utilisateur 
+                clique sur une icône ou un bouton de statut. -->
+                <input form="taskForm" type="hidden" name="icon" id="iconInput">
+                <input form="taskForm" type="hidden" name="status" id="statusInput">
+            </div>
+                <div class="icons">
+                    <h3>Icon</h3>
+                    <span class="select-icon" onclick="selectIcon('👨‍💻')">👨‍💻</span>
+                    <span class="select-icon" onclick="selectIcon('🗨️')">🗨️</span>
+                    <span class="select-icon" class="active" onclick="selectIcon('☕')">☕</span>
+                    <span class="select-icon" onclick="selectIcon('🏋️‍♀️')">🏋️‍♀️</span>
+                    <span class="select-icon" onclick="selectIcon('📚')">📚</span>
+                    <span class="select-icon" onclick="selectIcon('⏰')">⏰</span>
+                </div>
+            <div class="status">
+                <h3>Status</h3>
+                <div class="status-btn">
+                    <button id="select-btn" class="in-progress" type="button" onclick="selectStatus('in-progress')">
+                        <i class="fa-solid fa-hourglass-end"></i>
+                        In Progress
+                    </button>
+                    <button id="select-btn" class="completed" type="button" onclick="selectStatus('completed')">
+                        <i class="fa-solid fa-check"></i>
+                        Completed
+                    </button>
+                    <button id="select-btn" class="wont-do" type="button" onclick="selectStatus('wont-do')">
+                        <i class="fa-solid fa-xmark"></i>
+                        won't Do
+                    </button>
+                    <button id="select-btn" class="to-do" type="button" onclick="selectStatus('to-do')">
+                         <i class="fa-solid fa-list"></i>
+                         Tasks To Do
+                    </button>
+                </div>
+            </div>
+            <div class="save-delete">
+                <form action="/delete">
+                    <button class="delete" type="submit">
+                        Delete
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </form>
+                <form id="taskForm" action="/save" method="post">
+                    <button  class="save" type="submit">
+                        Save
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script src="/main.js"></script>
+    </body>
+</html>

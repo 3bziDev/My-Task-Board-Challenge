@@ -1,0 +1,309 @@
+/* Start The Golble Rules*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  } 
+  :root {
+    --bg-color : #F8FAFC;
+    --main-color: #F5D565;
+    --complet-task: #32D657;
+    --tasks-not-do: #DD524C;
+    --tasks-to-do : #00000033;
+    --add-new-tasks : #E9A23B;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #F5E8D5;
+  }
+  /*START GLOBAL RULES*/ 
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+    /*Small screen */
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+      /*Medium screen */
+    @media (min-width: 992px) {
+      .container {
+        width: 990px;
+      }
+    }
+      /*Large screen */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+    /*END GLOBAL RULES*/ 
+    /*START HEADER*/ 
+    .content {
+      position: relative;
+      text-align: center;
+      top: 50px;
+    }
+    .content .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .content .title .fa-clipboard-list{
+      font-size: 25px;
+      color: var(--main-color);
+    }
+    .content .title > h1 {
+      font-weight: 500;
+      font-size: 30px;
+    }
+    .content .title .fa-pen {
+      font-size: 10px;
+    }
+    .content > .paragraphe {
+      font-size: 13px;
+      color: var(--tasks-to-do);
+      text-align: center;
+    }
+    /*END HEADER*/ 
+    /*START ADD NEW TASKS*/ 
+    .add-tasks {
+      text-align: center;
+      position: relative;
+      top: 70px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: var(--add-new-tasks);
+      width: 400px;
+      align-items: center;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+      padding: 5px 15px;
+    }
+    .add-tasks > h1 {
+      flex: 1;
+      font-size: 12px;
+      text-align: left;
+    }
+    .add-tasks .add-btn {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--main-color);
+      color: white;
+      cursor: pointer;
+    }
+    .add-tasks .add-btn .fa-plus {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--add-new-tasks);
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*END ADD NEW TASKS*/ 
+    /*START TASKS DETAILS*/ 
+    .tasks-details {
+      width: 550px;
+      min-height: 100vh;
+      float: inline-end;
+      padding: 20px;
+      position: relative;
+      background-color: var(--bg-color);
+    }
+    .tasks-details > h1 {
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+    .tasks-details .info {
+      display: flex;
+      flex-direction: column;
+    }
+    .tasks-details .info .l-name {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--tasks-to-do);
+    }
+    .tasks-details .info .l-description {
+      margin: 15px 0 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--tasks-to-do);
+    } 
+    .tasks-details .info .name {
+      padding: 10px;
+      outline: none;
+      border: 1px solid var(--tasks-to-do);
+      border-radius: 5px;
+    }
+    .tasks-details .info .name::placeholder {
+      font-size: 12px;
+    }
+    .tasks-details .info .description {
+      height: 100px;
+      outline: none;
+      border: 1px solid var(--tasks-to-do);
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .tasks-details .icons {
+      margin: 15px 0 15px;
+    }
+    .tasks-details .icons > h3 {
+      font-size: 15px;
+      color: var(--tasks-to-do);
+      margin: 0 0 10px;
+    }
+    .tasks-details .icons > span {
+      text-decoration: none;
+      background-color: #00000033;
+      width: 20px;
+      height: 20px;
+      padding: 6px;
+      border-radius: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .tasks-details .icons .active {
+      background-color: var(--add-new-tasks);
+    }
+    .status > h3 {
+      font-size: 15px;
+      color: var(--tasks-to-do);
+      margin: 0 0 10px;
+    }
+    .status .status-btn {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-gap: 10px;
+    }
+    .status .status-btn > button {
+      padding: 2px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      border: 2px solid var(--tasks-to-do);
+      background-color: var(--bg-color);
+      cursor: pointer;
+    }
+    .status .status-btn .fa-solid {
+      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      color: white;
+    }
+    .status .status-btn .fa-hourglass-end {
+      background-color: var(--add-new-tasks);
+    }
+    .status .status-btn .fa-check {
+      background-color: var(--complet-task);
+    }
+    .status .status-btn .fa-xmark {
+      background-color: var(--tasks-not-do);
+    }
+    .status .status-btn .fa-list {
+      background-color: var(--tasks-to-do);
+    }
+    .save-delete {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      display: flex;
+    }
+    .save-delete .delete {
+      width: 120px;
+      height: 30px;
+      border: none;
+      background-color: #97A3B6;
+      margin-right: 10px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .save-delete .save {
+      width: 120px;
+      height: 30px;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #3662E3;
+    }
+    /*END TASKS DETAILS*/ 
+     /*STARAT MAIN PAGE*/ 
+    .card {
+      width: 400px;
+      left: 50%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .card .car {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card .car .icon {
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    .card .car .card-info {
+      flex: 1;
+    }
+    .card .car .card-info > h1 {
+      font-size: 20px;
+    }
+     .card .car .card-info > p {
+      font-size: 14px;
+    }
+    .completed {
+      background-color: #d4edda;
+    }
+    .in-progress {
+      background-color: #fff3cd;
+    }
+
+    .wont-do {
+      background-color: #f8d7da;
+    }
+    .to-do {
+      background-color: #d1ecf1;
+    }
+    /*STARAT MAIN PAGE*/ 

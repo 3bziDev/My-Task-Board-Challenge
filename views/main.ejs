@@ -1,0 +1,15 @@
+<%- include('header') %>
+<% data.forEach(task => { %>
+<a href="/tasks/<%= task.id %>/edit"><div class="card <%= task.status.toLowerCase().replace(' ', '-') %>">
+    <div class="car">
+        <div class="icon">
+            <%= task.icon %>
+        </div>
+        <div class="card-info">
+            <h1><%= task.title %></h1>
+            <p><%= task.content %></p>
+        </div>
+        </div>
+    </div> </a>
+<% }) %>
+<%- include('add') %>
