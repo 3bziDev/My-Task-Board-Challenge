@@ -80,7 +80,7 @@ node js/server.js
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/my-tasks-board-Challenge.git
+https://github.com/your-username/My-Task-Board-Challenge.git
 ```
 
 Navigate into the project directory:
@@ -139,7 +139,7 @@ If you'd like to improve this project:
 2. **Clone your fork**
 
 ```bash
-git clone https://github.com/your-username/my-tasks-board-Challenge.git
+https://github.com/your-username/My-Task-Board-Challenge.git
 ```
 
 3. **Create a new branch**
