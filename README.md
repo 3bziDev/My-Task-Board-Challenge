@@ -108,7 +108,7 @@ node js/server.js
 Or using **nodemon**:
 
 ```bash
-npx nodemon js/server.js
+npm nodemon js/server.js
 ```
 
 Open your browser and visit:
